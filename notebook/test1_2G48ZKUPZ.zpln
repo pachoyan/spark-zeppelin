@@ -1,0 +1,2168 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md\n\n# Introduction to Spark\n\nSpark Application:\n\nIt starts using a builder, by default Zeppelin interpreter starts a session for you and it is accessible via a variable called `spark` (for Python, Scala, R, ..)\n\nIn a normal job you would init a Spark Session as:\n\n```\nspark \u003d SparkSession.builder.appName(\"test\").getOrCreate()\n```",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-17 08:11:30.695",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003eIntroduction to Spark\u003c/h1\u003e\n\u003cp\u003eSpark Application:\u003c/p\u003e\n\u003cp\u003eIt starts using a builder, by default Zeppelin interpreter starts a session for you and it is accessible via a variable called \u003ccode\u003espark\u003c/code\u003e (for Python, Scala, R, ..)\u003c/p\u003e\n\u003cp\u003eIn a normal job you would init a Spark Session as:\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003espark \u003d SparkSession.builder.appName(\u0026quot;test\u0026quot;).getOrCreate()\n\u003c/code\u003e\u003c/pre\u003e\n\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1620432554989_830913641",
+      "id": "paragraph_1620432554989_830913641",
+      "dateCreated": "2021-05-08 00:09:14.989",
+      "dateStarted": "2021-05-17 08:11:30.698",
+      "dateFinished": "2021-05-17 08:11:30.761",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%md\nZeppelin tips and tricks:\n\nTo use an interpreter you need to specify it in the first line of a cell.\n\n```\n%python\n\nprint(\u0027Hello\u0027)\n```\n\nThe ones that we will be using in this notebook are:\n\n- `%python`: python interpreter\n- `%pyspark`: spark python interpreter (pyspark)\n- `%spark`: spark scala interpreter\n- `%spark.sql`: spark sql interpreter\n- `%spark.r`: spark r interpreter\n\nAn example of how to create one cell with python:",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-17 08:11:34.674",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eZeppelin tips and tricks:\u003c/p\u003e\n\u003cp\u003eTo use an interpreter you need to specify it in the first line of a cell.\u003c/p\u003e\n\u003cpre\u003e\u003ccode\u003e%python\n\nprint(\u0027Hello\u0027)\n\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eThe ones that we will be using in this notebook are:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ccode\u003e%python\u003c/code\u003e: python interpreter\u003c/li\u003e\n\u003cli\u003e\u003ccode\u003e%pyspark\u003c/code\u003e: spark python interpreter (pyspark)\u003c/li\u003e\n\u003cli\u003e\u003ccode\u003e%spark\u003c/code\u003e: spark scala interpreter\u003c/li\u003e\n\u003cli\u003e\u003ccode\u003e%spark.sql\u003c/code\u003e: spark sql interpreter\u003c/li\u003e\n\u003cli\u003e\u003ccode\u003e%spark.r\u003c/code\u003e: spark r interpreter\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eAn example of how to create one cell with python:\u003c/p\u003e\n\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1621191761771_1808686729",
+      "id": "paragraph_1621191761771_1808686729",
+      "dateCreated": "2021-05-16 19:02:41.774",
+      "dateStarted": "2021-05-17 08:11:34.673",
+      "dateFinished": "2021-05-17 08:11:34.728",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%python\n\nprint(\u0027Hello\u0027)\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-17 08:00:04.191",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Hello\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1621192002367_1281736756",
+      "id": "paragraph_1621192002367_1281736756",
+      "dateCreated": "2021-05-16 19:06:42.368",
+      "dateStarted": "2021-05-17 08:00:04.217",
+      "dateFinished": "2021-05-17 08:00:10.498",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%md\nSpark Application:\n\nIt exist one application in the interpreter as the spark session is initialized by Apache Zeppelin.\nIf you select the settings you\u0027ll be able to restart the Spark Session and see the different interpreters\n\nLet\u0027s give it a try!\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-17 08:11:25.900",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eSpark Application:\u003c/p\u003e\n\u003cp\u003eIt exist one application in the interpreter as the spark session is initialized by Apache Zeppelin.\u003cbr /\u003e\nIf you select the settings you\u0026rsquo;ll be able to restart the Spark Session and see the different interpreters\u003c/p\u003e\n\u003cp\u003eLet\u0026rsquo;s give it a try!\u003c/p\u003e\n\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1621192561360_806312048",
+      "id": "paragraph_1621192561360_806312048",
+      "dateCreated": "2021-05-16 19:16:01.361",
+      "dateStarted": "2021-05-17 08:11:25.901",
+      "dateFinished": "2021-05-17 08:11:25.920",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%pyspark\nprint(\"Spark Session: \" + str(spark))\nprint(\"Spark Context: \" + str(spark.sparkContext))",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-17 08:08:44.838",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Spark Session: \u003cpyspark.sql.session.SparkSession object at 0x7f7c94d4f990\u003e\nSpark Context: \u003cSparkContext master\u003dlocal[*] appName\u003dd91f3c25-9350-4b15-a9ae-b941e3098212\u003e\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1621191451878_488485428",
+      "id": "paragraph_1621191451878_488485428",
+      "dateCreated": "2021-05-16 18:57:31.878",
+      "dateStarted": "2021-05-17 08:08:44.953",
+      "dateFinished": "2021-05-17 08:08:45.238",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%md\nIf you run the next cell and go into localhost:4040 you\u0027ll see we have one job as we have called show()",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-17 08:11:19.347",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eIf you run the next cell and go into localhost:4040 you\u0026rsquo;ll see we have one job as we have called show()\u003c/p\u003e\n\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1621193744010_220813044",
+      "id": "paragraph_1621193744010_220813044",
+      "dateCreated": "2021-05-16 19:35:44.011",
+      "dateStarted": "2021-05-17 08:11:19.342",
+      "dateFinished": "2021-05-17 08:11:19.367",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%pyspark\n\ndf \u003d spark.createDataFrame([\"10\",\"11\",\"13\"], \"string\").toDF(\"age\")\ndf.show()\n\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-17 08:08:16.627",
+      "progress": 100,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+---+\n|age|\n+---+\n| 10|\n| 11|\n| 13|\n+---+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://c58dd3076e7c:4040/jobs/job?id\u003d0"
+            },
+            {
+              "jobUrl": "http://c58dd3076e7c:4040/jobs/job?id\u003d1"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1621192696758_957802026",
+      "id": "paragraph_1621192696758_957802026",
+      "dateCreated": "2021-05-16 19:18:16.758",
+      "dateStarted": "2021-05-17 08:08:16.715",
+      "dateFinished": "2021-05-17 08:08:40.226",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%md\nHow many jobs we will have in the next cell?\nAnd Spark Applications?",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-17 08:11:14.092",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eHow many jobs we will have in the next cell?\u003cbr /\u003e\nAnd Spark Applications?\u003c/p\u003e\n\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1621193809507_411012180",
+      "id": "paragraph_1621193809507_411012180",
+      "dateCreated": "2021-05-16 19:36:49.507",
+      "dateStarted": "2021-05-17 08:11:14.091",
+      "dateFinished": "2021-05-17 08:11:14.116",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%pyspark\ndf \u003d spark.createDataFrame([\"10\",\"11\",\"13\"], \"string\").toDF(\"age\")\ndf.show()\ndf.show()",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-17 08:08:51.163",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+---+\n|age|\n+---+\n| 10|\n| 11|\n| 13|\n+---+\n\n+---+\n|age|\n+---+\n| 10|\n| 11|\n| 13|\n+---+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://c58dd3076e7c:4040/jobs/job?id\u003d2"
+            },
+            {
+              "jobUrl": "http://c58dd3076e7c:4040/jobs/job?id\u003d3"
+            },
+            {
+              "jobUrl": "http://c58dd3076e7c:4040/jobs/job?id\u003d4"
+            },
+            {
+              "jobUrl": "http://c58dd3076e7c:4040/jobs/job?id\u003d5"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1621193792853_1095677084",
+      "id": "paragraph_1621193792853_1095677084",
+      "dateCreated": "2021-05-16 19:36:32.854",
+      "dateStarted": "2021-05-17 08:08:51.192",
+      "dateFinished": "2021-05-17 08:08:52.104",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%md\nSpark Jobs: ????\nSpark Applications: ????",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-17 08:10:57.754",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eSpark Jobs: ????\u003cbr /\u003e\nSpark Applications: ????\u003c/p\u003e\n\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1621239049014_977940861",
+      "id": "paragraph_1621239049014_977940861",
+      "dateCreated": "2021-05-17 08:10:49.015",
+      "dateStarted": "2021-05-17 08:10:57.754",
+      "dateFinished": "2021-05-17 08:10:57.782",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%md\nDataFrames examples:\n\nWith Python and SQL\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-17 08:11:01.192",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eDataFrames examples:\u003c/p\u003e\n\u003cp\u003eWith Python and SQL\u003c/p\u003e\n\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1621239026164_1233544987",
+      "id": "paragraph_1621239026164_1233544987",
+      "dateCreated": "2021-05-17 08:10:26.166",
+      "dateStarted": "2021-05-17 08:11:01.187",
+      "dateFinished": "2021-05-17 08:11:01.225",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%pyspark\n\ndf \u003d spark.read.json(\u0027/notebook/sample.json\u0027)\ndf.show()",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-17 08:08:56.295",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+---+--------+----+\n|age|    city|name|\n+---+--------+----+\n| 31|New York|John|\n+---+--------+----+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://c58dd3076e7c:4040/jobs/job?id\u003d6"
+            },
+            {
+              "jobUrl": "http://c58dd3076e7c:4040/jobs/job?id\u003d7"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1621194057648_1817286613",
+      "id": "paragraph_1621194057648_1817286613",
+      "dateCreated": "2021-05-16 19:40:57.648",
+      "dateStarted": "2021-05-17 08:08:56.338",
+      "dateFinished": "2021-05-17 08:08:58.419",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%spark.sql\nDROP TABLE IF EXISTS PEOPLE;\nCREATE TABLE IF NOT EXISTS PEOPLE\nUSING json\nOPTIONS(PATH \u0027/notebook/sample.json\u0027);\n\nselect * from people;",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-17 08:09:06.201",
+      "progress": 100,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9.0,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "age": "string",
+                      "city": "string",
+                      "name": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "age\tcity\tname\n31\tNew York\tJohn\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://c58dd3076e7c:4040/jobs/job?id\u003d8"
+            },
+            {
+              "jobUrl": "http://c58dd3076e7c:4040/jobs/job?id\u003d9"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1620432565116_1764666125",
+      "id": "paragraph_1620432565116_1764666125",
+      "dateCreated": "2021-05-08 00:09:25.117",
+      "dateStarted": "2021-05-17 08:09:06.255",
+      "dateFinished": "2021-05-17 08:09:07.006",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%md\n\nExecute sql statements as if it was a relational database. For example:\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-16 19:43:55.042",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eExecute sql statements as if it was a relational database. For example:\u003c/p\u003e\n\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1621194201660_761756840",
+      "id": "paragraph_1621194201660_761756840",
+      "dateCreated": "2021-05-16 19:43:21.661",
+      "dateStarted": "2021-05-16 19:43:55.034",
+      "dateFinished": "2021-05-16 19:43:55.060",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%spark.sql\nDESCRIBE table PEOPLE;",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-17 08:09:13.091",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9.0,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "col_name": "string",
+                      "data_type": "string",
+                      "comment": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "col_name\tdata_type\tcomment\nage\tbigint\tnull\ncity\tstring\tnull\nname\tstring\tnull\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1620433240298_1463786153",
+      "id": "paragraph_1620433240298_1463786153",
+      "dateCreated": "2021-05-08 00:20:40.298",
+      "dateStarted": "2021-05-17 08:09:13.134",
+      "dateFinished": "2021-05-17 08:09:13.397",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%spark.sql\nselect * from people;\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-17 08:09:17.537",
+      "progress": 100,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9.0,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "age": "string",
+                      "city": "string",
+                      "name": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          },
+          "1": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "age": "string",
+                      "city": "string",
+                      "name": "string"
+                    },
+                    "updated": true
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "age\tcity\tname\n31\tNew York\tJohn\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://c58dd3076e7c:4040/jobs/job?id\u003d10"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1620433498013_1890926182",
+      "id": "paragraph_1620433498013_1890926182",
+      "dateCreated": "2021-05-08 00:24:58.013",
+      "dateStarted": "2021-05-17 08:09:17.568",
+      "dateFinished": "2021-05-17 08:09:17.861",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%spark.sql\n\nDROP TABLE IF EXISTS PEOPLE_2;\nCREATE TABLE IF NOT EXISTS PEOPLE_2\nUSING csv\nOPTIONS(\n    PATH \u0027/notebook/sample.csv\u0027,\n    header \u0027true\u0027, \n    inferSchema \u0027true\u0027,\n    sep \u0027,\u0027\n);\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-17 08:09:34.081",
+      "progress": 100,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": []
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://c58dd3076e7c:4040/jobs/job?id\u003d11"
+            },
+            {
+              "jobUrl": "http://c58dd3076e7c:4040/jobs/job?id\u003d12"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1620433615462_1243218854",
+      "id": "paragraph_1620433615462_1243218854",
+      "dateCreated": "2021-05-08 00:26:55.462",
+      "dateStarted": "2021-05-17 08:09:34.134",
+      "dateFinished": "2021-05-17 08:09:35.281",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%spark.sql\nDESCRIBE table PEOPLE_2;",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-17 08:09:39.883",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9.0,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "col_name": "string",
+                      "data_type": "string",
+                      "comment": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "col_name",
+                  "index": 0.0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "data_type",
+                  "index": 1.0,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          },
+          "1": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "col_name": "string",
+                      "data_type": "string",
+                      "comment": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "col_name\tdata_type\tcomment\nname\tstring\tnull\nage\tint\tnull\ncity\tstring\tnull\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1620433734044_272839711",
+      "id": "paragraph_1620433734044_272839711",
+      "dateCreated": "2021-05-08 00:28:54.044",
+      "dateStarted": "2021-05-17 08:09:39.917",
+      "dateFinished": "2021-05-17 08:09:40.006",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%spark.sql\nselect * from PEOPLE_2;",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-17 08:09:46.049",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9.0,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "name": "string",
+                      "age": "string",
+                      "city": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          },
+          "1": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "Username": "string",
+                      " Identifier": "string",
+                      "First name": "string",
+                      "Last name": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "name\tage\tcity\nJohn\t31\tNew York\nDavid\t32\tBoston\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://c58dd3076e7c:4040/jobs/job?id\u003d13"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1620433749748_655392729",
+      "id": "paragraph_1620433749748_655392729",
+      "dateCreated": "2021-05-08 00:29:09.748",
+      "dateStarted": "2021-05-17 08:09:45.110",
+      "dateFinished": "2021-05-17 08:09:45.533",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%md\nTransformations:\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-17 08:15:26.317",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eTransformations:\u003c/p\u003e\n\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1621239312515_351865374",
+      "id": "paragraph_1621239312515_351865374",
+      "dateCreated": "2021-05-17 08:15:12.515",
+      "dateStarted": "2021-05-17 08:15:26.322",
+      "dateFinished": "2021-05-17 08:15:26.337",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%md\nNarrow Transformations:",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-17 08:15:41.369",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eNarrow Transformations:\u003c/p\u003e\n\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1621239334325_2121883087",
+      "id": "paragraph_1621239334325_2121883087",
+      "dateCreated": "2021-05-17 08:15:34.325",
+      "dateStarted": "2021-05-17 08:15:41.369",
+      "dateFinished": "2021-05-17 08:15:41.394",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%pyspark\nfrom pyspark.sql.functions import col, expr, when\n\ndf \u003d spark.read.json(\u0027/notebook/sample.json\u0027).filter(col(\"age\") \u003e 32).show()\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-17 08:20:21.483",
+      "progress": 100,
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+---+------+----+\n|age|  city|name|\n+---+------+----+\n| 34|Boston|Paul|\n+---+------+----+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://c58dd3076e7c:4040/jobs/job?id\u003d23"
+            },
+            {
+              "jobUrl": "http://c58dd3076e7c:4040/jobs/job?id\u003d24"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1620433855635_423901476",
+      "id": "paragraph_1620433855635_423901476",
+      "dateCreated": "2021-05-08 00:30:55.636",
+      "dateStarted": "2021-05-17 08:20:21.511",
+      "dateFinished": "2021-05-17 08:20:25.054",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%spark.sql\n\nDROP TABLE IF EXISTS PEOPLE;\nCREATE TABLE IF NOT EXISTS PEOPLE\nUSING json\nOPTIONS(PATH \u0027/notebook/sample.json\u0027);\n\nselect * from people where age \u003e 32;\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-17 08:19:37.300",
+      "progress": 100,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9.0,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "age": "string",
+                      "city": "string",
+                      "name": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "age\tcity\tname\n34\tBoston\tPaul\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://c58dd3076e7c:4040/jobs/job?id\u003d21"
+            },
+            {
+              "jobUrl": "http://c58dd3076e7c:4040/jobs/job?id\u003d22"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1621239415827_1505608247",
+      "id": "paragraph_1621239415827_1505608247",
+      "dateCreated": "2021-05-17 08:16:55.828",
+      "dateStarted": "2021-05-17 08:19:36.025",
+      "dateFinished": "2021-05-17 08:19:36.496",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%md \nWide Transformations",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-17 08:20:12.449",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eWide Transformations\u003c/p\u003e\n\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1621239531966_951869783",
+      "id": "paragraph_1621239531966_951869783",
+      "dateCreated": "2021-05-17 08:18:51.967",
+      "dateStarted": "2021-05-17 08:20:12.453",
+      "dateFinished": "2021-05-17 08:20:12.483",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%pyspark\nfrom pyspark.sql.functions import col, expr, when\n\ndf \u003d spark.read.json(\u0027/notebook/sample.json\u0027)\ndf.groupBy(\"age\").count().show()\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-17 08:24:12.761",
+      "progress": 71,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+---+-----+\n|age|count|\n+---+-----+\n| 34|    1|\n+---+-----+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://f8882a523cf1:4040/jobs/job?id\u003d0"
+            },
+            {
+              "jobUrl": "http://f8882a523cf1:4040/jobs/job?id\u003d1"
+            },
+            {
+              "jobUrl": "http://f8882a523cf1:4040/jobs/job?id\u003d2"
+            },
+            {
+              "jobUrl": "http://f8882a523cf1:4040/jobs/job?id\u003d3"
+            },
+            {
+              "jobUrl": "http://f8882a523cf1:4040/jobs/job?id\u003d4"
+            },
+            {
+              "jobUrl": "http://f8882a523cf1:4040/jobs/job?id\u003d5"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1621239612445_378062419",
+      "id": "paragraph_1621239612445_378062419",
+      "dateCreated": "2021-05-17 08:20:12.446",
+      "dateStarted": "2021-05-17 08:23:26.922",
+      "dateFinished": "2021-05-17 08:24:01.282",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%spark.sql\n\nDROP TABLE IF EXISTS PEOPLE;\nCREATE TABLE IF NOT EXISTS PEOPLE\nUSING json\nOPTIONS(PATH \u0027/notebook/sample.json\u0027);\n\nselect age, count(*) from people group by age;",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-17 08:26:42.882",
+      "progress": 0,
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "age": "string",
+                      "count(1)": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/sql"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "age\tcount(1)\n34\t1\n31\t1\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://f8882a523cf1:4040/jobs/job?id\u003d7"
+            },
+            {
+              "jobUrl": "http://f8882a523cf1:4040/jobs/job?id\u003d8"
+            },
+            {
+              "jobUrl": "http://f8882a523cf1:4040/jobs/job?id\u003d9"
+            },
+            {
+              "jobUrl": "http://f8882a523cf1:4040/jobs/job?id\u003d10"
+            },
+            {
+              "jobUrl": "http://f8882a523cf1:4040/jobs/job?id\u003d11"
+            },
+            {
+              "jobUrl": "http://f8882a523cf1:4040/jobs/job?id\u003d12"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1621239701325_829362974",
+      "id": "paragraph_1621239701325_829362974",
+      "dateCreated": "2021-05-17 08:21:41.330",
+      "dateStarted": "2021-05-17 08:26:39.601",
+      "dateFinished": "2021-05-17 08:26:41.513",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%spark.sql\nexplain select age, count(*) from people group by age;",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-17 08:26:57.551",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9.0,
+        "results": {
+          "0": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "plan": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "plan\n\u003d\u003d Physical Plan \u003d\u003d *(2) HashAggregate(keys\u003d[age#50L], functions\u003d[count(1)]) +- Exchange hashpartitioning(age#50L, 200)    +- *(1) HashAggregate(keys\u003d[age#50L], functions\u003d[partial_count(1)])       +- *(1) FileScan json default.people[age#50L] Batched: false, Format: JSON, Location: InMemoryFileIndex[file:/notebook/sample.json], PartitionFilters: [], PushedFilters: [], ReadSchema: struct\u003cage:bigint\u003e\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1621239981346_1248782911",
+      "id": "paragraph_1621239981346_1248782911",
+      "dateCreated": "2021-05-17 08:26:21.347",
+      "dateStarted": "2021-05-17 08:26:55.472",
+      "dateFinished": "2021-05-17 08:26:55.664",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%pyspark\ndf \u003d spark.read.json(\u0027/notebook/sample.json\u0027)\ndf.groupBy(\"age\").count().explain()",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-17 08:28:41.119",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "\u003d\u003d Physical Plan \u003d\u003d\n*(2) HashAggregate(keys\u003d[age#97L], functions\u003d[count(1)])\n+- Exchange hashpartitioning(age#97L, 200)\n   +- *(1) HashAggregate(keys\u003d[age#97L], functions\u003d[partial_count(1)])\n      +- *(1) FileScan json [age#97L] Batched: false, Format: JSON, Location: InMemoryFileIndex[file:/notebook/sample.json], PartitionFilters: [], PushedFilters: [], ReadSchema: struct\u003cage:bigint\u003e\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://f8882a523cf1:4040/jobs/job?id\u003d14"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1621240015469_155084673",
+      "id": "paragraph_1621240015469_155084673",
+      "dateCreated": "2021-05-17 08:26:55.469",
+      "dateStarted": "2021-05-17 08:28:41.147",
+      "dateFinished": "2021-05-17 08:28:41.598",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%md\nLazy Evaluation",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-17 08:29:15.195",
+      "progress": 0,
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1621240065095_1370594180",
+      "id": "paragraph_1621240065095_1370594180",
+      "dateCreated": "2021-05-17 08:27:45.102",
+      "status": "READY"
+    },
+    {
+      "text": "%pyspark\nfrom pyspark.sql.functions import col, expr, when\nfrom pyspark.sql.functions import lower, upper\n\ndf.select(col(\u0027name\u0027), lower(col(\u0027name\u0027)), col(\u0027age\u0027)).show()\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-17 08:36:34.466",
+      "progress": 100,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+----+-----------+---+\n|name|lower(name)|age|\n+----+-----------+---+\n|John|       john| 31|\n|Paul|       paul| 34|\n+----+-----------+---+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://f8882a523cf1:4040/jobs/job?id\u003d17"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1621240161606_499805746",
+      "id": "paragraph_1621240161606_499805746",
+      "dateCreated": "2021-05-17 08:29:21.607",
+      "dateStarted": "2021-05-17 08:36:34.494",
+      "dateFinished": "2021-05-17 08:36:34.883",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%md\nExecute the next code",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-17 08:37:15.837",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eExecute the next code\u003c/p\u003e\n\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1621240613564_766329137",
+      "id": "paragraph_1621240613564_766329137",
+      "dateCreated": "2021-05-17 08:36:53.564",
+      "dateStarted": "2021-05-17 08:37:15.837",
+      "dateFinished": "2021-05-17 08:37:20.431",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%pyspark\nfrom pyspark.sql.functions import col, expr, when\nfrom pyspark.sql.functions import lower, upper\n\ndf.select(col(\u0027name\u0027), lower(col(\u0027name\u0027)), col(\u0027age\u0027))",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-17 08:37:23.012",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "DataFrame[name: string, lower(name): string, age: bigint]"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1621240208856_2021349372",
+      "id": "paragraph_1621240208856_2021349372",
+      "dateCreated": "2021-05-17 08:30:08.856",
+      "dateStarted": "2021-05-17 08:37:23.082",
+      "dateFinished": "2021-05-17 08:37:24.776",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%md\nCan you find a job for the previous execution? If not, why?\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-17 08:37:46.612",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eCan you find a job for the previous execution? If not, why?\u003c/p\u003e\n\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1621240643075_509627262",
+      "id": "paragraph_1621240643075_509627262",
+      "dateCreated": "2021-05-17 08:37:23.076",
+      "dateStarted": "2021-05-17 08:37:46.617",
+      "dateFinished": "2021-05-17 08:37:46.698",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%md\nNow try a new cell adding an action: take(), show(), count()",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-17 08:38:24.569",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eNow try a new cell adding an action: take(), show(), count()\u003c/p\u003e\n\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1621240666608_2135333087",
+      "id": "paragraph_1621240666608_2135333087",
+      "dateCreated": "2021-05-17 08:37:46.608",
+      "dateStarted": "2021-05-17 08:38:24.548",
+      "dateFinished": "2021-05-17 08:38:24.623",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%pyspark\n# TODO\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-17 08:38:33.720",
+      "progress": 0,
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1621240704545_1867227304",
+      "id": "paragraph_1621240704545_1867227304",
+      "dateCreated": "2021-05-17 08:38:24.549",
+      "status": "READY"
+    },
+    {
+      "text": "%md\nNow try to guess if the next cell will generate a job:\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-17 08:39:34.007",
+      "progress": 0,
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eNow try to guess if the next cell will generate a job:\u003c/p\u003e\n\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1621240720485_958824240",
+      "id": "paragraph_1621240720485_958824240",
+      "dateCreated": "2021-05-17 08:38:40.487",
+      "dateStarted": "2021-05-17 08:39:34.011",
+      "dateFinished": "2021-05-17 08:39:34.067",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%pyspark\ndf.groupBy(\"age\").count()",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-17 08:39:37.721",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "DataFrame[age: bigint, count: bigint]"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1621240745300_1641170550",
+      "id": "paragraph_1621240745300_1641170550",
+      "dateCreated": "2021-05-17 08:39:05.304",
+      "dateStarted": "2021-05-17 08:39:37.821",
+      "dateFinished": "2021-05-17 08:39:39.591",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%spark.sql\nselect age, count(*) from people group by age;",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-17 08:40:42.981",
+      "progress": 21,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "ERROR",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "java.lang.RuntimeException: java.io.IOException: org.apache.thrift.transport.TTransportException: java.net.ConnectException: Connection refused (Connection refused)\n\tat org.apache.zeppelin.interpreter.remote.PooledRemoteClient.callRemoteFunction(PooledRemoteClient.java:100)\n\tat org.apache.zeppelin.interpreter.remote.RemoteInterpreterProcess.callRemoteFunction(RemoteInterpreterProcess.java:98)\n\tat org.apache.zeppelin.interpreter.remote.RemoteInterpreter.interpret(RemoteInterpreter.java:208)\n\tat org.apache.zeppelin.notebook.Paragraph.jobRun(Paragraph.java:490)\n\tat org.apache.zeppelin.notebook.Paragraph.jobRun(Paragraph.java:72)\n\tat org.apache.zeppelin.scheduler.Job.run(Job.java:172)\n\tat org.apache.zeppelin.scheduler.AbstractScheduler.runJob(AbstractScheduler.java:132)\n\tat org.apache.zeppelin.scheduler.RemoteScheduler$JobRunner.run(RemoteScheduler.java:182)\n\tat java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)\n\tat java.util.concurrent.FutureTask.run(FutureTask.java:266)\n\tat java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)\n\tat java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)\n\tat java.lang.Thread.run(Thread.java:748)\nCaused by: java.io.IOException: org.apache.thrift.transport.TTransportException: java.net.ConnectException: Connection refused (Connection refused)\n\tat org.apache.zeppelin.interpreter.remote.RemoteInterpreterProcess.lambda$new$0(RemoteInterpreterProcess.java:60)\n\tat org.apache.zeppelin.interpreter.remote.RemoteClientFactory.create(RemoteClientFactory.java:54)\n\tat org.apache.zeppelin.interpreter.remote.RemoteClientFactory.create(RemoteClientFactory.java:34)\n\tat org.apache.commons.pool2.BasePooledObjectFactory.makeObject(BasePooledObjectFactory.java:60)\n\tat org.apache.commons.pool2.impl.GenericObjectPool.create(GenericObjectPool.java:861)\n\tat org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:435)\n\tat org.apache.zeppelin.interpreter.remote.PooledRemoteClient.getClient(PooledRemoteClient.java:54)\n\tat org.apache.zeppelin.interpreter.remote.PooledRemoteClient.callRemoteFunction(PooledRemoteClient.java:92)\n\t... 14 more\nCaused by: org.apache.thrift.transport.TTransportException: java.net.ConnectException: Connection refused (Connection refused)\n\tat org.apache.thrift.transport.TSocket.open(TSocket.java:226)\n\tat org.apache.zeppelin.interpreter.remote.RemoteInterpreterProcess.lambda$new$0(RemoteInterpreterProcess.java:58)\n\t... 21 more\nCaused by: java.net.ConnectException: Connection refused (Connection refused)\n\tat java.net.PlainSocketImpl.socketConnect(Native Method)\n\tat java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)\n\tat java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)\n\tat java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)\n\tat java.net.Socket.connect(Socket.java:607)\n\tat org.apache.thrift.transport.TSocket.open(TSocket.java:221)\n\t... 22 more\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://f8882a523cf1:4040/jobs/job?id\u003d18"
+            },
+            {
+              "jobUrl": "http://f8882a523cf1:4040/jobs/job?id\u003d19"
+            },
+            {
+              "jobUrl": "http://f8882a523cf1:4040/jobs/job?id\u003d20"
+            },
+            {
+              "jobUrl": "http://f8882a523cf1:4040/jobs/job?id\u003d21"
+            },
+            {
+              "jobUrl": "http://f8882a523cf1:4040/jobs/job?id\u003d22"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1621240777805_1474267774",
+      "id": "paragraph_1621240777805_1474267774",
+      "dateCreated": "2021-05-17 08:39:37.806",
+      "dateStarted": "2021-05-17 08:40:43.098",
+      "dateFinished": "2021-05-17 08:40:48.655",
+      "status": "ERROR"
+    },
+    {
+      "text": "%spark.sql\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-05-17 08:40:43.113",
+      "progress": 0,
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1621240843085_130290154",
+      "id": "paragraph_1621240843085_130290154",
+      "dateCreated": "2021-05-17 08:40:43.099",
+      "status": "READY"
+    }
+  ],
+  "name": "test1",
+  "id": "2G48ZKUPZ",
+  "defaultInterpreterGroup": "spark",
+  "version": "0.9.0",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}
